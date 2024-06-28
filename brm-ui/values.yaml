@@ -12,10 +12,10 @@ service:
 
 ingress:
   enabled: true
-  name: brm-ui-denizbank
+  name: brm-ui-ingress
   namespace: brm
   ingressclass: nginx
   host: ltbrm.apps.uat.deniz.denizbank.com
   path: /
-  serviceName: denizbank-ui
+  serviceName: brm-ui-service
   portNumber: 80
