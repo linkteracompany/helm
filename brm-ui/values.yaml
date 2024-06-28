@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  self: dcr.deniz.denizbank.com/linktera/brm:denizbank-ui-v1.0.35
+  policy: IfNotPresent
+  env:
+    api: ltbrmapp.apps.uat.deniz.denizbank.com
+
+service:
+  type: LoadBalancer
+  port: 80
+
+ingress:
+  enabled: true
+  name: brm-ui-denizbank
+  namespace: brm
+  ingressclass: nginx
+  host: ltbrm.apps.uat.deniz.denizbank.com
+  path: /
+  serviceName: denizbank-ui
+  portNumber: 80

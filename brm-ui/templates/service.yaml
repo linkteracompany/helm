@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: brm-ui-service
+  labels:
+    app: brm-ui-service
+spec:
+  selector:
+    app: brm-ui-service
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: 3000
+  type: {{ .Values.service.type }}

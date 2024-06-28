@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: brm-api-deployment
+  name: brm-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brm-api-deployment
+  strategy: { }
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: brm-api-deployment
+    spec:
+      containers:
+        - image: {{ .Values.container.image }}
+          name: {{ .Values.container.name }}
+          envFrom:
+            - configMapRef:
+                name: brm-api-configmap
+          resources:
+            limits:
+              cpu: 2
+              memory: "4Gi"
+            requests:
+              cpu: 1
+              memory: "2Gi"
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+status: { }

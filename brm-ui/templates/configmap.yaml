@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: brm-ui-configmap
+  labels:
+    app: brm-ui-configmap
+data:
+  version: "1.0"
+  TZ: Europe/Istanbul

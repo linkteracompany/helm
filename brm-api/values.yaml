@@ -1,0 +1,102 @@
+## FOR DEPLOYMENT.YAML DATA TAG ##
+version: "1.0"
+appVersion: "1.0.0"
+
+general:
+  bankName: ""
+  bankCode: ""
+  tokenIssuer: ""
+  timeZone: ""
+
+session:
+  timeoutInHours: ""
+  autoLogoffWhenPrivilegeChange: ""
+
+defaultUserSecret:
+  secret: ""
+
+logger:
+  logPropertiesOnStartup: ""
+  notLogRequestAddresses: ""
+
+serverAdmin:
+  userName: ""
+  email: ""
+  secret: ""
+
+apiEndpoint:
+  frontendHomepage: "https://server"
+  servletContextPath: "/api"
+  corsAllowedOrigins: "*"
+
+cipher:
+  encryptorPassword: ""
+
+authorization:
+  loginType: ""
+  ldapProviderUrl: ""
+  ldapBase: ""
+  ldapDn: ""
+  ldapPassword: ""
+
+datasource:
+  url: ""
+  username: ""
+  passwordColumnExists: ""
+  password: ""
+  driverClassName: "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+  jdbcTemplateFetchSize: "150"
+  minimumIdle: "2"
+  maximumPoolSize: "8"
+  validationTimeout: "40000"
+  connectionTimeout: "30000"
+  idleTimeout: "35000"
+  maxLifetime: "40000"
+  hikariConnectionTestQuery: "SELECT 1"
+  testQuery: "SELECT 1"
+
+mailServer:
+  host: "smtp.office365.com"
+  port: "587"
+  username: ""
+  password: ""
+  from: ""
+  feedbackToList: ""
+  websiteAddress: ""
+  protocol: "smtp"
+  smtpConnectiontimeout: "15000"
+  smtpTimeout: "15000"
+  smtpWritetimeout: "15000"
+  debug: "false"
+
+caching:
+  type: "Simple"
+
+
+## INGRESS.YAML ##
+ingress:
+  name: "brm-api-ingress"
+  namespace: "brm"
+  ingressclass: "nginx"
+  host: ""
+  path: "/"
+  backendServiceName: "brm-backend"
+  backendServicePortNumber: "80"
+
+
+
+## FOR DEPLOYMENT.YAML DEPLOYMENT SPECS ##
+container:
+  image: ""
+  name: ""
+  host: ""
+
+service:
+  port: 80
+
+
+
+
+
+
+

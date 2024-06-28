@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: brm-ui-deployment
+  labels:
+    app: brm-ui-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: brm-ui-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: brm-ui-deployment
+    spec:
+      containers:
+        - name: ui
+          image: {{ .Values.image.self }}
+          env:
+            - name: api_url
+              value: {{ .Values.image.env.api }}
+          resources:
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+            requests:
+              cpu: "1"
+              memory: "2Gi"
+          ports:
+            - containerPort: 3000
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: regcred
+status: {}

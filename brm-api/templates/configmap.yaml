@@ -1,0 +1,82 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: brm-api-configmap
+  name: brm-api-configmap
+data:
+  version: "{{ .Values.version }}"
+  app.version: "{{ .Values.appVersion }}"
+
+  #General Configuration
+  general.bank-name: "{{ .Values.general.bankName }}"
+  general.bank-code: "{{ .Values.general.bankCode }}"
+  general.token-issuer: "{{ .Values.general.tokenIssuer }}"
+  spring.jackson.time-zone: "{{ .Values.general.timeZone }}"
+
+  #General Session Configuration
+  general.session-timeout-in-hours: "{{ .Values.session.timeoutInHours }}"
+  general.auto-logoff-when-privilege-change: "{{ .Values.session.autoLogoffWhenPrivilegeChange }}"
+
+  #Default given password for users after creation.
+  general.default-user-secret: "{{ .Values.defaultUserSecret.secret }}"
+
+  #Logging Configuration
+  logger.log-properties-on-startup: "{{ .Values.logger.logPropertiesOnStartup }}"
+  logging.not-log-request-addresses: "{{ .Values.logger.notLogRequestAddresses }}"
+
+  #Server Admin Configuration
+  server.admin.username: "{{ .Values.serverAdmin.userName }}"
+  server.admin.email: "{{ .Values.serverAdmin.email }}"
+  server.admin.secret: "{{ .Values.serverAdmin.secret }}"
+
+  #API Endpoint Configuration
+  frontend.homepage: "{{ .Values.apiEndpoint.frontendHomepage }}"
+  server.servlet.contextPath: "{{ .Values.apiEndpoint.servletContextPath }}"
+  endpoints.cors.allowed-origins: "{{ .Values.apiEndpoint.corsAllowedOrigins }}"
+
+  #Cipher Configuration
+  jasypt.encryptor.password: "{{ .Values.cipher.encryptorPassword }}"
+  
+  #Authorization Configuration (simple, ldap)
+  authorization.login-type: "{{ .Values.authorization.loginType }}"
+  authorization.ldap-provider-url: "{{ .Values.authorization.ldapProviderUrl }}"
+  authorization.ldap-base: "{{ .Values.authorization.ldapBase }}"
+  authorization.ldap-dn: "{{ .Values.authorization.ldapDn }}"
+  authorization.ldap-password: "{{ .Values.authorization.ldapPassword }}"
+  
+  #Database Configuration
+  spring.datasource.url: "{{ .Values.datasource.url }}"
+  spring.datasource.username: "{{ .Values.datasource.username }}"
+  spring.datasource.password-column-exists: "{{ .Values.datasource.passwordColumnExists }}"
+  spring.datasource.password: "{{ .Values.datasource.password }}"
+  spring.datasource.driver-class-name: "{{ .Values.datasource.driverClassName }}"
+  spring.jdbc.template.fetch-size: "{{ .Values.datasource.jdbcTemplateFetchSize }}"
+  spring.datasource.hikari.minimumIdle: "{{ .Values.datasource.minimumIdle }}"
+  spring.datasource.hikari.maximumPoolSize: "{{ .Values.datasource.maximumPoolSize }}"
+  spring.datasource.hikari.validation-timeout: "{{ .Values.datasource.validationTimeout }}"
+  spring.datasource.hikari.connectionTimeout: "{{ .Values.datasource.connectionTimeout }}"
+  spring.datasource.hikari.idleTimeout: "{{ .Values.datasource.idleTimeout }}"
+  spring.datasource.hikari.maxLifetime: "{{ .Values.datasource.maxLifetime }}"
+  spring.datasource.hikari.connection-test-query: "{{ .Values.datasource.hikariConnectionTestQuery }}"
+  spring.datasource.test-query: "{{ .Values.datasource.testQuery }}"
+  
+  #Mail Server Configuration
+  spring.mail.host: "{{ .Values.mailServer.host }}"
+  spring.mail.port: "{{ .Values.mailServer.port }}"
+  spring.mail.username: "{{ .Values.mailServer.username }}"
+  spring.mail.password: "{{ .Values.mailServer.password }}"
+  spring.mail.from: "{{ .Values.mailServer.from }}"
+  spring.mail.feedback-to-list: "{{ .Values.mailServer.feedbackToList }}"
+  spring.mail.website-address: "{{ .Values.mailServer.websiteAddress }}"
+  spring.mail.properties.mail.protocol: "{{ .Values.mailServer.protocol }}"
+  spring.mail.properties.mail.smtp.connectiontimeout: "{{ .Values.mailServer.smtpConnectiontimeout }}"
+  spring.mail.properties.mail.smtp.timeout: "{{ .Values.mailServer.smtpTimeout }}"
+  spring.mail.properties.mail.smtp.writetimeout: "{{ .Values.mailServer.smtpWritetimeout }}"
+  spring.mail.properties.mail.debug: "{{ .Values.mailServer.debug }}"
+
+  #Cache Configuration
+  spring.cache.type: "{{ .Values.caching.type }}"
+
+
+  TZ: Europe/Istanbul
