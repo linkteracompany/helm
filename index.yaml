@@ -3,9 +3,9 @@ entries:
   brm-api-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-28T11:50:25.1874079+03:00"
+    created: "2024-06-28T14:15:29.9194099+03:00"
     description: A Helm chart for Kubernetes
-    digest: 9738ffae2c86f7c2d2ff1198adc19b16808ccf73c2ef7dab0499a38ecb80955b
+    digest: 77dd7640188d3bf945986987c91722409a2e49a796cd9ecc396aeed2a8f9e3b7
     name: brm-api-chart
     type: application
     urls:
@@ -14,7 +14,7 @@ entries:
   brm-ui-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-06-28T11:50:25.1880384+03:00"
+    created: "2024-06-28T14:15:29.9289405+03:00"
     description: A Helm chart for Kubernetes
     digest: d3ea92ae0cc824ee935d47f8a2519c4c642b9968dbacf2a4320bcdee8735ac57
     name: brm-ui-chart
@@ -22,4 +22,4 @@ entries:
     urls:
     - https://linkteracompany.github.io/helm/brm-ui-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-28T11:50:25.1855139+03:00"
+generated: "2024-06-28T14:15:29.9182396+03:00"

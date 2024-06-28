@@ -80,7 +80,7 @@ ingress:
   ingressclass: "nginx"
   host: ""
   path: "/"
-  backendServiceName: "brm-backend"
+  backendServiceName: "brm-api-service"
   backendServicePortNumber: "80"
 
 
