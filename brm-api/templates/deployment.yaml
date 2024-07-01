@@ -1,21 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: brm-api-deployment
   creationTimestamp: null
   labels:
-    app: brm-api-deployment
-  name: brm-api-deployment
+    app: brm-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: brm-api-deployment
-  strategy: { }
+      app: brm-api
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: brm-api-deployment
+        app: brm-api
     spec:
       containers:
         - image: {{ .Values.container.image }}

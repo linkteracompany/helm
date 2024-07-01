@@ -4,18 +4,18 @@ metadata:
   creationTimestamp: null
   name: brm-ui-deployment
   labels:
-    app: brm-ui-deployment
+    app: brm-ui
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: brm-ui-deployment
+      app: brm-ui
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: brm-ui-deployment
+        app: brm-ui
     spec:
       containers:
         - name: ui

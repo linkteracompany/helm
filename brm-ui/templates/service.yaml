@@ -6,7 +6,7 @@ metadata:
     app: brm-ui-service
 spec:
   selector:
-    app: brm-ui-service
+    app: brm-ui
   ports:
     - protocol: TCP
       port: {{ .Values.service.port }}
