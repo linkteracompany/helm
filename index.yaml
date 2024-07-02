@@ -1,25 +1,25 @@
 apiVersion: v1
 entries:
-  brm-api-chart:
+  brm-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-01T15:06:55.8288384+03:00"
+    created: "2024-07-02T12:14:57.8105246+03:00"
     description: A Helm chart for Kubernetes
-    digest: 15a3b64c427463c0560384e88c374a2af352c38c53af260f4eccf55243eb54c6
-    name: brm-api-chart
+    digest: 89ca68941635e08ac3be989d60a45ca10b3015ded990daa02c9cc47a7f8d14c5
+    name: brm-api
     type: application
     urls:
-    - https://linkteracompany.github.io/helm/brm-api-chart-0.1.0.tgz
+    - https://linkteracompany.github.io/helm/brm-api-0.1.0.tgz
     version: 0.1.0
-  brm-ui-chart:
+  brm-ui:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-01T15:06:55.8294164+03:00"
+    created: "2024-07-02T12:14:57.8110747+03:00"
     description: A Helm chart for Kubernetes
-    digest: 79926c54508a3acc22d2788dcfc6dd78c364940efb735fb9ef094f0ac745d087
-    name: brm-ui-chart
+    digest: 7bdf22d51b05ee7afc3d6c2c9f145cde1722ae96e6d3e14efd37e5550c1e5c70
+    name: brm-ui
     type: application
     urls:
-    - https://linkteracompany.github.io/helm/brm-ui-chart-0.1.0.tgz
+    - https://linkteracompany.github.io/helm/brm-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-01T15:06:55.8276523+03:00"
+generated: "2024-07-02T12:14:57.8093434+03:00"
