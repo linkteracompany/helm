@@ -19,6 +19,9 @@ logger:
   logPropertiesOnStartup: ""
   notLogRequestAddresses: ""
 
+server:
+  forwardHeaderStrategy: ""
+
 serverAdmin:
   userName: ""
   email: ""

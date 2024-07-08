@@ -25,6 +25,10 @@ data:
   logger.log-properties-on-startup: "{{ .Values.logger.logPropertiesOnStartup }}"
   logging.not-log-request-addresses: "{{ .Values.logger.notLogRequestAddresses }}"
 
+  #Web Server Config
+  server.forward-headers-strategy: "{{ .Values.server.forwardHeaderStrategy }}"
+
+
   #Server Admin Configuration
   server.admin.username: "{{ .Values.serverAdmin.userName }}"
   server.admin.email: "{{ .Values.serverAdmin.email }}"
@@ -79,4 +83,4 @@ data:
   spring.cache.type: "{{ .Values.caching.type }}"
 
 
-  TZ: Europe/Istanbul
+  TZ: "Europe/Istanbul"
