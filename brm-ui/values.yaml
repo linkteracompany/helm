@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  self: dcr.deniz.denizbank.com/linktera/brm:denizbank-ui-v1.0.35
+  self: dcr.deniz.denizbank.com/linktera/brm:denizbank-ui-v1.0.36
   policy: IfNotPresent
   env:
     api: ltbrmapp.apps.uat.deniz.denizbank.com
