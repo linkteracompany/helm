@@ -3,7 +3,17 @@ entries:
   brm-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-16T13:36:43.5846219+03:00"
+    created: "2024-07-16T14:01:48.8723177+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 91eaf1cc8d917b572cac8ac2d565ab8ddf498fd027dfd77672d05d0c78bf86dc
+    name: brm-api
+    type: application
+    urls:
+    - https://linkteracompany.github.io/helm/brm-api-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-07-16T14:01:48.8717287+03:00"
     description: A Helm chart for Kubernetes
     digest: c1e2ceb179a33bd8a4f2e0c1b9a4efa5753b27054f1cfbe0c68a0977cdf05969
     name: brm-api
@@ -13,7 +23,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-16T13:36:43.581399+03:00"
+    created: "2024-07-16T14:01:48.8711584+03:00"
     description: A Helm chart for Kubernetes
     digest: 89ca68941635e08ac3be989d60a45ca10b3015ded990daa02c9cc47a7f8d14c5
     name: brm-api
@@ -24,7 +34,17 @@ entries:
   brm-ui:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-16T13:36:43.5859085+03:00"
+    created: "2024-07-16T14:01:48.8742344+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 452fce9b26ef3c85a7b286425857df4ff23e7f4a9ad254631d58d4e59a2c8305
+    name: brm-ui
+    type: application
+    urls:
+    - https://linkteracompany.github.io/helm/brm-ui-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-07-16T14:01:48.8736252+03:00"
     description: A Helm chart for Kubernetes
     digest: 18a4d6ce096dc0d08bd9d4b455d7a7df7216a9de99c0907a320d027ecec6de10
     name: brm-ui
@@ -34,7 +54,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-07-16T13:36:43.5853702+03:00"
+    created: "2024-07-16T14:01:48.8728351+03:00"
     description: A Helm chart for Kubernetes
     digest: 7bdf22d51b05ee7afc3d6c2c9f145cde1722ae96e6d3e14efd37e5550c1e5c70
     name: brm-ui
@@ -42,4 +62,4 @@ entries:
     urls:
     - https://linkteracompany.github.io/helm/brm-ui-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-16T13:36:43.5802538+03:00"
+generated: "2024-07-16T14:01:48.8697228+03:00"

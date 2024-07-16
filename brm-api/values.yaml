@@ -95,6 +95,7 @@ container:
   host: ""
 
 service:
+  type: ClusterIP
   port: 80
 
 
