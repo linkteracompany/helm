@@ -82,5 +82,8 @@ data:
   #Cache Configuration
   spring.cache.type: "{{ .Values.caching.type }}"
 
+  #Swagger
+  spring.mvc.pathmatch.matching-strategy: "ant_path_matcher"
+
 
   TZ: "Europe/Istanbul"
